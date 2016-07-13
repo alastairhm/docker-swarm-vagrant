@@ -18,6 +18,12 @@ config.vm.define "manager" do |mng|
   mng.vm.network "private_network", ip: "192.168.50.10"
 end
 
+config.vm.define "discovery" do |dis|
+  dis.vm.box = "ubuntu/trusty64"
+  dis.vm.hostname = "discovery.swarm"
+  dis.vm.network "private_network", ip: "192.168.50.20"
+end
+
 config.vm.define "agent1" do |ag1|
   ag1.vm.box = "ubuntu/trusty64"
   ag1.vm.hostname = "agent1.swarm"
