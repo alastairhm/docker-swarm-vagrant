@@ -14,19 +14,19 @@ end
 
 config.vm.define "manager" do |mng|
   mng.vm.box = "ubuntu/trusty64"
-  mng.vm.hostname = "manager"
+  mng.vm.hostname = "manager.swarm"
   mng.vm.network "private_network", ip: "192.168.50.10"
 end
 
 config.vm.define "agent1" do |ag1|
   ag1.vm.box = "ubuntu/trusty64"
-  ag1.vm.hostname = "agent1"
+  ag1.vm.hostname = "agent1.swarm"
   ag1.vm.network "private_network", ip: "192.168.50.2"
 end
 
 config.vm.define "agent2" do |ag2|
   ag2.vm.box = "ubuntu/trusty64"
-  ag2.vm.hostname = "agent2"
+  ag2.vm.hostname = "agent2.swarm"
   ag2.vm.network "private_network", ip: "192.168.50.3"
 end
 

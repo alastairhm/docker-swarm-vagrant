@@ -1,7 +1,7 @@
 node /manager/ {
-    include docker
+    include swarm-manager
 }
 
 node /agent/ {
-    include docker
+    include swarm-agent
 }
