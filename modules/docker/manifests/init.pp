@@ -19,6 +19,7 @@ class docker {
   } ->
   exec { 'docker start':
     command => '/usr/bin/nohup /usr/bin/docker daemon -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock &',
+    timeout     => 1800,
   }
 
 }
