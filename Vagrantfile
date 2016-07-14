@@ -10,12 +10,27 @@ config.vm.provision :puppet do |puppet|
   puppet.manifests_path = "manifests"
   puppet.manifest_file  = "default.pp"
   puppet.module_path = 'modules'
+  puppet.hiera_config_path = 'hiera.yaml'
+  puppet.working_directory = '/vagrant'
+  #puppet.options = "--debug"
+end
+
+config.vm.define "discovery" do |dis|
+  dis.vm.box = "ubuntu/trusty64"
+  dis.vm.hostname = "discovery.swarm"
+  dis.vm.network "private_network", ip: "192.168.50.20"
 end
 
 config.vm.define "manager" do |mng|
   mng.vm.box = "ubuntu/trusty64"
   mng.vm.hostname = "manager.swarm"
   mng.vm.network "private_network", ip: "192.168.50.10"
+end
+
+config.vm.define "manager2" do |mng|
+  mng.vm.box = "ubuntu/trusty64"
+  mng.vm.hostname = "manager2.swarm"
+  mng.vm.network "private_network", ip: "192.168.50.11"
 end
 
 config.vm.define "agent1" do |ag1|
