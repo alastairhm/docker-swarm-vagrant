@@ -22,3 +22,7 @@ Add in a second manager node
    vagrant ssh manager
    docker node ls
    ```
+
+You can now follow the tutorial about adding services
+<https://docs.docker.com/engine/swarm/swarm-tutorial/deploy-service/>
+
