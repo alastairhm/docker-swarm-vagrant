@@ -15,6 +15,13 @@ Once it has started up;
    docker node ls
    exit
    ```
+```
+vagrant@manager:~$ docker node ls
+ID                           HOSTNAME       MEMBERSHIP  STATUS  AVAILABILITY  MANAGER STATUS
+3osy9ro4itrgsa8jan0pjh2rj *  manager.swarm  Accepted    Ready   Active        Leader
+8k5iekt04969qgdpkcevfp5lx    agent1.swarm   Accepted    Ready   Active
+d1fercip5d7kvra40k2rgbf0u    agent2.swarm   Accepted    Ready   Active
+```
 
 Add in a second manager node
 
@@ -23,6 +30,15 @@ Add in a second manager node
    vagrant ssh manager
    docker node ls
    ```
+
+```
+vagrant@manager:~$ docker node ls
+ID                           HOSTNAME        MEMBERSHIP  STATUS  AVAILABILITY  MANAGER STATUS
+2blz45lhzlyq5ps688yanhtjh    manager2.swarm  Accepted    Ready   Active        Reachable
+3osy9ro4itrgsa8jan0pjh2rj *  manager.swarm   Accepted    Ready   Active        Leader
+8k5iekt04969qgdpkcevfp5lx    agent1.swarm    Accepted    Ready   Active
+d1fercip5d7kvra40k2rgbf0u    agent2.swarm    Accepted    Ready   Active
+```
 
 You can now follow the tutorial about adding services
 <https://docs.docker.com/engine/swarm/swarm-tutorial/deploy-service/>
