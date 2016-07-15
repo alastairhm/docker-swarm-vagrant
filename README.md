@@ -2,6 +2,7 @@
 ## using new Features in Docker v1.12
 
 Based on instructions on <https://docs.docker.com/engine/swarm/swarm-tutorial/>
+Using Pre-release v1.12.0-rc4 <https://github.com/docker/docker/releases>
 
 To start up manager and 2 node cluster
 
