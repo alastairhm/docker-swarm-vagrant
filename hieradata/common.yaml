@@ -2,6 +2,7 @@
 discovery : 192.168.50.20
 manager   : 192.168.50.10
 manager2  : 192.168.50.11
+manager3  : 192.168.50.13
 agent1    : 192.168.50.1
 agent2    : 192.168.50.2
 dockerurl : "https://test.docker.com/"
