@@ -10,3 +10,8 @@ Once it has started up;
 
    vagrant ssh manager
    docker node ls
+   exit
+
+Add in a second manager node
+
+   vagrant up manager2
