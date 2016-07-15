@@ -17,4 +17,8 @@ Once it has started up;
 
 Add in a second manager node
 
-   ```vagrant up manager2
+   ```
+   vagrant up manager2
+   vagrant ssh manager
+   docker node ls
+   ```
